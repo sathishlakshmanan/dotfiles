@@ -11,12 +11,14 @@ lsp.configure('gopls', {
 })
 
 lsp.configure('pylsp')
+lsp.configure('tsserver')
 
 lsp.preset("recommended")
 
 lsp.ensure_installed({
     'gopls',
     'pylsp',
+    'tsserver',
 })
 
 local cmp = require'cmp'
