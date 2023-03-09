@@ -5,6 +5,7 @@ map('n', '<C-\\>', ':below split <bar> terminal<CR>i')
 map('t', '<C-\\>', '<C-\\><C-n>:q<CR>')
 
 map('i', 'jj', '<Esc>')
+map('i', 'JJ', '<Esc>')
 map('i', ':wq', '<Esc>:wq')
 map('i', ':w', '<Esc>:w')
 map('i', '<Space><Space>', '<Right>')

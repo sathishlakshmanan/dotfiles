@@ -84,11 +84,6 @@ _G.packer_plugins = {
     path = "/home/dingus/.local/share/nvim/site/pack/packer/start/bufferline.nvim",
     url = "https://github.com/akinsho/bufferline.nvim"
   },
-  catppuccin = {
-    loaded = true,
-    path = "/home/dingus/.local/share/nvim/site/pack/packer/start/catppuccin",
-    url = "https://github.com/catppuccin/nvim"
-  },
   ["cmp-buffer"] = {
     loaded = true,
     path = "/home/dingus/.local/share/nvim/site/pack/packer/start/cmp-buffer",
@@ -148,6 +143,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/dingus/.local/share/nvim/site/pack/packer/start/nerdtree",
     url = "https://github.com/preservim/nerdtree"
+  },
+  ["nightfox.nvim"] = {
+    loaded = true,
+    path = "/home/dingus/.local/share/nvim/site/pack/packer/start/nightfox.nvim",
+    url = "https://github.com/EdenEast/nightfox.nvim"
   },
   ["nvim-cmp"] = {
     loaded = true,
