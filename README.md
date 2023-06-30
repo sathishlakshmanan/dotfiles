@@ -4,3 +4,4 @@ configuration files for,
 - [bashrc](https://www.gnu.org/software/bash/)
 - [tmux](https://github.com/tmux/tmux/wiki)
 - [Starship](https://starship.rs/)
+- [i3](https://i3wm.org/)
