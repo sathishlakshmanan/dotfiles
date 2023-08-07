@@ -8,12 +8,13 @@ return require("packer").startup(function(use)
     use("preservim/nerdcommenter")
 
     -- color scheme
-    -- use { "catppuccin/nvim", as = "catppuccin" }
-    use "EdenEast/nightfox.nvim"
+    use { "catppuccin/nvim", as = "catppuccin" }
+    -- use "EdenEast/nightfox.nvim"
     -- use("sainnhe/gruvbox-material")
     -- use("dracula/vim")
     -- use("folke/tokyonight.nvim")
     -- use("arcticicestudio/nord-vim")
+    use({ 'rose-pine/neovim', as = 'rose-pine' })
 
     -- telescope
     use {
@@ -79,4 +80,8 @@ return require("packer").startup(function(use)
     --         })
     --     end
     -- })
+
+    use {"akinsho/toggleterm.nvim", tag = '*', config = function()
+      require("toggleterm").setup()
+    end}
 end)

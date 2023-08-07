@@ -1,18 +1,21 @@
 local set = vim.opt
 
-vim.g.mapleader = ';'
-
 --vim.g.gruvbox_material_background='hard' -- other options: 'medium', 'soft'
 --vim.g.gruvbox_material_better_performance=1
 -- vim.g.gruvbox_material_diagnostic_text_highlight=1
 -- vim.g.gruvbox_material_diagnostic_line_highlight=1
 
 -- require('catppuccin').setup({
---     flavour = "frappe", -- latte, frappe, macchiato, mocha
+--     flavour = "macchiato", latte, frappe, macchiato, mocha
 --     transparent_background = true
 -- })
 
-vim.cmd "colorscheme nightfox"
+require('rose-pine').setup({
+    dark_variant = 'main', -- 'main'|'moon'|'dawn'
+    disable_background = true,
+	disable_italics = true,
+})
+vim.cmd "colorscheme rose-pine"
 vim.cmd [[autocmd BufWritePre <buffer> lua vim.lsp.buf.formatting_sync()]]
 
 set.number = true

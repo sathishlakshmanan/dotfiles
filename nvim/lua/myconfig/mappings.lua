@@ -1,41 +1,39 @@
+vim.g.mapleader = ';'
+
 local map = require('myconfig.utils').map
 
-map('n', '<C-\\>', ':below split <bar> terminal<CR>i')
-
-map('t', '<C-\\>', '<C-\\><C-n>:q<CR>')
-
+-- equivalent: vim.api.nvim_set_keymap('i', 'jj', '<Esc>', {noremap = true})
 map('i', 'jj', '<Esc>')
 map('i', 'JJ', '<Esc>')
 map('i', ':wq', '<Esc>:wq')
 map('i', ':w', '<Esc>:w')
-map('i', '<Space><Space>', '<Right>')
+map('n', '<C-p>', ':lua _PYTHON_TOGGLE()<CR>')
 
-map('n', 'm', 'o<Esc><Up>')
-map('n', 'M', 'O<Esc><Down>')
+map('n', '<Leader>o', 'o<Esc><Up>')
+map('n', '<Leader>O', 'O<Esc><Down>')
 map('n', 's', ';')
+map('n', '<Leader>r', ':so %<CR>')
 
-map('n', '<Leader>j', ':bnext<CR>')
-map('i', '<Leader>j', '<Esc>:bnext<CR>')
-map('n', '<Leader>k', ':bprevious<CR>')
-map('i', '<Leader>k', '<Esc>:bprevious<CR>')
-map('n', '<Leader>J', ':BufferLineMoveNext<CR>')
-map('n', '<Leader>K', ':BufferLineMovePrev<CR>')
+map('n', '<Leader>n', ':bnext<CR>')
+map('i', '<Leader>n', '<Esc>:bnext<CR>')
+map('n', '<Leader>p', ':bprevious<CR>')
+map('i', '<Leader>p', '<Esc>:bprevious<CR>')
+map('n', '<Leader>N', ':BufferLineMoveNext<CR>')
+map('n', '<Leader>P', ':BufferLineMovePrev<CR>')
 
-map('i', '"', '""<Left>')
-map('i', "'", "''<Left>")
-map('i', '(', '()<Left>')
-map('i', '{', '{}<Left>')
+map('i', '{{', '{<CR><CR>}<Up><Tab>')
+map('i', '((', '(<CR><CR>)<Up><Tab>')
 map('i', '{{', '{}<Left><CR><CR><Up><Tab>')
-map('i', '[', '[]<Left>')
 map('i', '"""', '""""""<Left><Left><Left>')
 map('i', "'''", "''''''<Left><Left><Left>")
 
 map('i', '{%', '{%  %}<Left><Left><Left>')
 map('i', 'blc', '{% block content %}<CR><CR><CR><CR>{% endblock %}<Up><Up>')
 
-map('i', 'ciw', '<Esc>ciw')
-map('i', "diw", '<Esc>diw')
-map('i', 'yiw', '<Esc>yiw')
+map('n', '<C-h>', '<C-w>h')
+map('n', '<C-j>', '<C-w>j')
+map('n', '<C-k>', '<C-w>k')
+map('n', '<C-l>', '<C-w>l')
 
 map('n', '<Up>', '<Nop>')
 map('n', '<Down>', '<Nop>')
