@@ -12,6 +12,7 @@ map('n', '<C-p>', ':lua _PYTHON_TOGGLE()<CR>')
 map('n', '<Leader>o', 'o<Esc><Up>')
 map('n', '<Leader>O', 'O<Esc><Down>')
 map('n', 's', ';')
+
 map('n', '<Leader>r', ':so %<CR>')
 
 map('n', '<Leader>n', ':bnext<CR>')
@@ -21,9 +22,22 @@ map('i', '<Leader>p', '<Esc>:bprevious<CR>')
 map('n', '<Leader>N', ':BufferLineMoveNext<CR>')
 map('n', '<Leader>P', ':BufferLineMovePrev<CR>')
 
-map('i', '{{', '{<CR><CR>}<Up><Tab>')
+map('i', '(', '()<Left>')
+map('i', '{', '{}<Left>')
+map('i', '[', '[]<Left>')
+map('i', "'", "''<Left>")
+map('i', '"', '""<Left>')
+
+map('i', ')', '<Esc>:lua check_and_move(")")<CR>')
+map('i', '}', '<Esc>:lua check_and_move("}")<CR>')
+map('i', ']', '<Esc>:lua check_and_move("]")<CR>')
+-- to implement (problem with quotes)
+-- map('i', "'", '<Esc>:lua check_and_move("\'")<CR>')
+-- map('i', '"', '<Esc>:lua check_and_move("\"")<CR>')
+
 map('i', '((', '(<CR><CR>)<Up><Tab>')
-map('i', '{{', '{}<Left><CR><CR><Up><Tab>')
+map('i', '{{', '{<CR><CR>}<Up><Tab>')
+map('i', '[[', '[<CR><CR>]<Up><Tab>')
 map('i', '"""', '""""""<Left><Left><Left>')
 map('i', "'''", "''''''<Left><Left><Left>")
 
