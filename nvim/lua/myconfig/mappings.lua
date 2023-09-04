@@ -13,6 +13,8 @@ map('n', '<Leader>o', 'o<Esc><Up>')
 map('n', '<Leader>O', 'O<Esc><Down>')
 map('n', 's', ';')
 
+map('n', '<Leader>e', '<cmd>lua vim.diagnostic.open_float()<CR>')
+
 map('n', '<Leader>r', ':so %<CR>')
 
 map('n', '<Leader>n', ':bnext<CR>')

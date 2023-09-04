@@ -7,7 +7,7 @@ function check_and_move(input_char)
     if next_char == input_char then
         vim.fn.feedkeys('la', 'n') -- move one character right and go into insert mode
     else
-        vim.fn.feedkeys('a' .. input_char, 'n') -- Perform default behavior of input_char
+        vim.fn.feedkeys('a' .. input_char, 'n') -- Perform default behavior of input_char 
     end
 
 end
